@@ -139,6 +139,15 @@ public class WineImpl implements Wine {
     }
 
     @Override
+    public float getAverageRating() {
+        float totalRating = 0;
+        for (final WineReview r : reviews) {
+            totalRating += r.getRating();
+        }
+        return totalRating > 0 ? totalRating / (float) reviews.size() : 0;
+    }
+
+    @Override
     public void clear() {
         mName = null;
         mProducer = null;

@@ -43,5 +43,7 @@ public interface Wine {
     void addReview(WineReview review);
     void removeReview(WineReview review);
 
+    float getAverageRating();
+
     void clear();
 }
