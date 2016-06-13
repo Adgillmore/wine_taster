@@ -1,9 +1,9 @@
 package com.amorphic.atg.taster.review;
 
-import com.amorphic.atg.taster.review.notes.AppearanceNotes;
-import com.amorphic.atg.taster.review.notes.NoseNotes;
-import com.amorphic.atg.taster.review.notes.OtherComments;
-import com.amorphic.atg.taster.review.notes.PalateNotes;
+import com.amorphic.atg.taster.review.appearance.AppearanceNotes;
+import com.amorphic.atg.taster.review.nose.NoseNotes;
+import com.amorphic.atg.taster.review.general.GeneralComments;
+import com.amorphic.atg.taster.review.palate.PalateNotes;
 
 /**
  * Created by adam on 12/06/16.
@@ -16,7 +16,7 @@ public interface WineReview {
 
     PalateNotes getPalateNotes();
 
-    OtherComments getOtherComments();
+    GeneralComments getOtherComments();
 
     void setRating(float rating);
     float getRating();

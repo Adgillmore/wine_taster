@@ -1,13 +1,13 @@
 package com.amorphic.atg.taster.review;
 
-import com.amorphic.atg.taster.review.notes.AppearanceNotes;
-import com.amorphic.atg.taster.review.notes.AppearanceNotesImpl;
-import com.amorphic.atg.taster.review.notes.NoseNotes;
-import com.amorphic.atg.taster.review.notes.NoseNotesImpl;
-import com.amorphic.atg.taster.review.notes.OtherComments;
-import com.amorphic.atg.taster.review.notes.OtherCommentsImpl;
-import com.amorphic.atg.taster.review.notes.PalateNotes;
-import com.amorphic.atg.taster.review.notes.PalateNotesImpl;
+import com.amorphic.atg.taster.review.appearance.AppearanceNotes;
+import com.amorphic.atg.taster.review.appearance.AppearanceNotesImpl;
+import com.amorphic.atg.taster.review.nose.NoseNotes;
+import com.amorphic.atg.taster.review.nose.NoseNotesImpl;
+import com.amorphic.atg.taster.review.general.GeneralComments;
+import com.amorphic.atg.taster.review.general.GeneralCommentsImpl;
+import com.amorphic.atg.taster.review.palate.PalateNotes;
+import com.amorphic.atg.taster.review.palate.PalateNotesImpl;
 
 /**
  * Created by adam on 12/06/16.
@@ -17,14 +17,14 @@ public class WineReviewImpl implements WineReview {
     private final AppearanceNotes mAppearanceNotes;
     private final NoseNotes mNoseNotes;
     private final PalateNotes mPalateNotes;
-    private final OtherComments mOtherComments;
+    private final GeneralComments mOtherComments;
     private float mRating;
 
     public WineReviewImpl() {
         mAppearanceNotes = new AppearanceNotesImpl();
         mNoseNotes = new NoseNotesImpl();
         mPalateNotes = new PalateNotesImpl();
-        mOtherComments = new OtherCommentsImpl();
+        mOtherComments = new GeneralCommentsImpl();
     }
 
     @Override
@@ -43,7 +43,7 @@ public class WineReviewImpl implements WineReview {
     }
 
     @Override
-    public OtherComments getOtherComments() {
+    public GeneralComments getOtherComments() {
         return null;
     }
 
