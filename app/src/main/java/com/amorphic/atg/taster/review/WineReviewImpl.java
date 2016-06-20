@@ -29,22 +29,22 @@ public class WineReviewImpl implements WineReview {
 
     @Override
     public AppearanceNotes getAppearanceNotes() {
-        return null;
+        return mAppearanceNotes;
     }
 
     @Override
     public NoseNotes getNoseNotes() {
-        return null;
+        return mNoseNotes;
     }
 
     @Override
     public PalateNotes getPalateNotes() {
-        return null;
+        return mPalateNotes;
     }
 
     @Override
     public GeneralComments getOtherComments() {
-        return null;
+        return mOtherComments;
     }
 
     @Override
